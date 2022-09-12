@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Addbtn } from "./Addbtn";
 import "./App.css";
+import { Button } from "./Button";
+import { Display } from "./Display";
 import { SubButton } from "./SubButton";
 
 function App() {
@@ -12,9 +14,8 @@ function App() {
 
   return (
     <div className="App">
-      <SubButton setCounter={handleOnClick} />
-      <span>{counter}</span>
-      <Addbtn setCounter={handleOnClick} />
+      <Display counter={counter} />
+      <Button handleOnClick={handleOnClick} />
     </div>
   );
 }
